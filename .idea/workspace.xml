@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ef81278-e5d8-4f3e-b5bc-29cf6fa3c709" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/middleware/api/loginUser.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/routes/api.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/middleware/checkUserLoggedIn.js" afterPath="$PROJECT_DIR$/middleware/common/checkUserLoggedIn.js" />
-      <change beforePath="$PROJECT_DIR$/middleware/deleteDogMW.js" afterPath="$PROJECT_DIR$/middleware/dogs/deleteDogMW.js" />
-      <change beforePath="$PROJECT_DIR$/middleware/editDog.js" afterPath="$PROJECT_DIR$/middleware/dogs/editDog.js" />
-      <change beforePath="$PROJECT_DIR$/middleware/getDog.js" afterPath="$PROJECT_DIR$/middleware/dogs/getDog.js" />
-      <change beforePath="$PROJECT_DIR$/middleware/getDogList.js" afterPath="$PROJECT_DIR$/middleware/dogs/getDogList.js" />
-      <change beforePath="$PROJECT_DIR$/middleware/loginUser.js" afterPath="$PROJECT_DIR$/middleware/outside/loginUser.js" />
-      <change beforePath="$PROJECT_DIR$/middleware/logoutUser.js" afterPath="$PROJECT_DIR$/middleware/outside/logoutUser.js" />
-      <change beforePath="$PROJECT_DIR$/middleware/mainRedirect.js" afterPath="$PROJECT_DIR$/middleware/outside/mainRedirect.js" />
-      <change beforePath="$PROJECT_DIR$/middleware/registerUser.js" afterPath="$PROJECT_DIR$/middleware/outside/registerUser.js" />
-      <change beforePath="$PROJECT_DIR$/middleware/render.js" afterPath="$PROJECT_DIR$/middleware/common/render.js" />
-      <change beforePath="$PROJECT_DIR$/middleware/uploadDog.js" afterPath="$PROJECT_DIR$/middleware/dogs/uploadDog.js" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/routes/dogs.js" afterPath="$PROJECT_DIR$/routes/dogs.js" />
-      <change beforePath="$PROJECT_DIR$/routes/outside.js" afterPath="$PROJECT_DIR$/routes/outside.js" />
-      <change beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-    </list>
+    <list default="true" id="4ef81278-e5d8-4f3e-b5bc-29cf6fa3c709" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -44,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loginUser.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loginUser.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/middleware/api/loginUser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="35" column="48" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+            <state relative-caret-position="191">
+              <caret line="33" column="61" lean-forward="false" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -74,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="api.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/api.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -314,12 +294,12 @@
       <workItem from="1520277993989" duration="98000" />
       <workItem from="1520278108364" duration="32558000" />
       <workItem from="1520544557830" duration="7457000" />
-      <workItem from="1520679350964" duration="3073000" />
+      <workItem from="1520679350964" duration="3921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69044000" />
+    <option name="totallyTimeSpent" value="69892000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="722" extended-state="0" />
@@ -329,7 +309,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289256" sideWeight="0.5031746" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30615383" sideWeight="0.4968254" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30615383" sideWeight="0.4968254" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -584,18 +564,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.js">
+    <entry file="file://$PROJECT_DIR$/middleware/api/loginUser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="191">
+          <caret line="33" column="61" lean-forward="false" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/middleware/api/loginUser.js">
+    <entry file="file://$PROJECT_DIR$/routes/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="35" column="48" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding />
         </state>
       </provider>
