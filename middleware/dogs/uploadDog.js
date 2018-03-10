@@ -1,4 +1,4 @@
-var Dog = require("../schema/dog");
+var Dog = require("../../schema/dog");
 var fs = require('fs-extra');
 
 

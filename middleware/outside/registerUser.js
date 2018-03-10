@@ -1,4 +1,4 @@
-var User = require("../schema/user");
+var User = require("../../schema/user");
 
 module.exports = function () {
 

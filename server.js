@@ -51,7 +51,7 @@ app.use(function (req, res, next) {
  */
 require('./routes/dogs')(app);
 require('./routes/outside')(app);
-
+require('./routes/api')(app);
 
 /**
  * Standard error handler
