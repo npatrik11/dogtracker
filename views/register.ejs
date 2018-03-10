@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">DOG TRACKER REGISTER</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            <a href="/login" class="btn btn-info btn-block">Back</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4 col-xs-push-4">
+            <%- include('errorbox') %>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="registerInputEmail">Email address</label>
+                    <input type="email" class="form-control" name="registerInputEmail" id="registerInputEmail" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="registerInputPassword">Password</label>
+                    <input type="password" class="form-control" name="registerInputPassword" id="registerInputPassword" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="registerInputPhoneNumber">Phone number</label>
+                    <input type="text" class="form-control" name="registerInputPhoneNumber" id="registerInputPhoneNumber" placeholder="Phone number">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" value="Register"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

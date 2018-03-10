@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modify</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">DOG TRACKER MODIFY</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            <a href="/dogs" class="btn btn-info btn-block">Back</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4 col-xs-push-4">
+            <%- include('errorbox') %>
+            <form method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="editInputImageFile">Modify Image File</label>
+                    <input type="file" name="editInputImageFile" id="editInputImageFile" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="editInputName">Name</label>
+                    <input type="text" class="form-control" name="editInputName" id="editInputName" placeholder="Name" value="<%=dog.name%>">
+                </div>
+                <div class="form-group">
+                    <label for="editInputType">Type</label>
+                    <input type="text" class="form-control" name="editInputType" id="editInputType" placeholder="Type" value="<%=dog.type%>">
+                </div>
+                <div class="form-group">
+                    <label for="editInputAge">Age</label>
+                    <input type="number" min="0" max="100" class="form-control" name="editInputAge" id="editInputAge" placeholder="Age (years)" value="<%=dog.age%>">
+                </div>
+                <div class="form-group">
+                    <label for="editInputSex">Sex</label>
+                    <select name="editInputSex" id="editInputSex" class="form-control">
+                        <option value="Male" <%=dog.sex === 'Male' ? 'selected' : ''%>>Male</option>
+                        <option value="Female" <%=dog.sex === 'Female' ? 'selected' : ''%>>Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" value="Modify Dog"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

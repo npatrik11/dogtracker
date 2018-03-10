@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:data="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Main</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">DOG TRACKER MAIN</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            <a href="/logout" class="btn btn-info btn-block">Logout</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-xs-push-3">
+            <%- include('errorbox') %>
+            <% if (dogs.length === 0) { %>
+            <table class="table table-bordered">
+                <tr>
+                    <td>
+                        <label>No dogs found in database</label><br>
+                    </td>
+                </tr>
+            </table>
+            <%} else { dogs.forEach(function(dog){ %>
+            <table class="table table-bordered">
+                <tr>
+                    <td class="align-middle" style="width: 30%">
+                        <a href="/dogs/<%=dog._id%>/image">
+                            <img src="data:image/*;base64, <%=dog.image%>" class="img-thumbnail" alt="Thumbnail image">
+                        </a>
+                    </td>
+                    <td style="width: 40%">
+                        <label>Name: <%= dog.name %></label><br>
+                        <label>Type: <%= dog.type %></label><br>
+                        <label>Age: <%= dog.age %></label><br>
+                        <label>Sex: <%= dog.sex %></label><br>
+                    </td>
+                    <td style="width: 30%">
+                        <% if (dog.userEmail === user.email){ %>
+                        <a href="/dogs/<%= dog._id %>/edit" class="btn btn-info btn-block">Edit</a>
+                        <a href="/dogs/<%= dog._id %>/delete" class="btn btn-info btn-block">Delete</a>
+                        <% } else {%>
+                        <button data-toggle="collapse" data-target="#contactDetails" class="btn btn-info btn-block">Contact</button>
+                        <% } %>
+                    </td>
+                </tr>
+            </table>
+            <table class="table table-bordered">
+                <tr id="contactDetails" class="collapse">
+                    <td style="width: 100%">
+                        <label>Contact details to get: <%= dog.name %></label><br>
+                        <label>Email: <%= dog.userEmail %></label><br>
+                        <label>Phone: <%= dog.userPhone %></label><br>
+                    </td>
+                </tr>
+            </table>
+            <% }); }%>
+            <a href="/dogs/new" class="btn btn-primary btn-block">Upload New Dog</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
