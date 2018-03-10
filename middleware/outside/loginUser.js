@@ -1,4 +1,4 @@
-var User = require('../schema/user');
+var User = require('../../schema/user');
 var bcrypt = require('bcrypt');
 
 module.exports = function () {

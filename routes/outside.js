@@ -1,9 +1,9 @@
-var renderMW = require('../middleware/render');
-var loginUserMW = require('../middleware/loginUser');
-var registerUserMW = require('../middleware/registerUser');
-var checkUserLoggedInMW = require('../middleware/checkUserLoggedIn');
-var logoutUserMW = require('../middleware/logoutUser');
-var mainRedirectMW = require('../middleware/mainRedirect');
+var renderMW = require('../middleware/common/render');
+var loginUserMW = require('../middleware/outside/loginUser');
+var registerUserMW = require('../middleware/outside/registerUser');
+var checkUserLoggedInMW = require('../middleware/common/checkUserLoggedIn');
+var logoutUserMW = require('../middleware/outside/logoutUser');
+var mainRedirectMW = require('../middleware/outside/mainRedirect');
 
 module.exports = function (app) {
 

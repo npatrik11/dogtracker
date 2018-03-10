@@ -1,23 +1,22 @@
-var Dog = require('../schema/dog')
-var User = require('../schema/user')
+var Dog = require('../../schema/dog')
 
 /**
- * Get the dog list and put the dogs in res.tpl.dogs
+ * Get the dog image and put the dogs in res.tpl.dogImage
  */
 
 module.exports = function () {
 
     return function (req, res, next) {
 
-        Dog.find({}, function (err, dogs) {
+        Dog.find({
+            _id:req.params.dogid
+        }, function (err, dogs) {
 
             if (err) {
                 res.tpl.error.push(err);
                 return next();
             } else {
-
-                res.tpl.user = req.session.user;
-                res.tpl.dogs = dogs;
+                res.tpl.dog = dogs[0];
                 return next();
             }
         })
