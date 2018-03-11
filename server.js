@@ -5,7 +5,13 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var mongoose = require('./config/db');
 var db = mongoose.connection;
+var bearerToken = require('express-bearer-token');
 
+
+/**
+ * For own api
+ */
+app.use(bearerToken());
 
 /**
  * Static stuff
