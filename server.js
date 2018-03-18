@@ -5,7 +5,13 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var mongoose = require('./config/db');
 var db = mongoose.connection;
+var bearerToken = require('express-bearer-token');
 
+
+/**
+ * For own api
+ */
+app.use(bearerToken());
 
 /**
  * Static stuff
@@ -20,7 +26,7 @@ app.set('view engine', 'ejs');
 app.use(session({
     secret: 'keyboard cat',
     cookie: {
-        maxAge: 60000
+        maxAge: 600000
     },
     resave: true,
     saveUninitialized: false

@@ -1,6 +1,7 @@
 var User = require('../../schema/user');
 var bcrypt = require('bcrypt');
 var jwt = require('jwt-simple');
+var jwtConfig = require('../../config/jwtConfig');
 
 module.exports = function () {
 
@@ -28,8 +29,7 @@ module.exports = function () {
                     bcrypt.compare(userFromRequest.password, usersFromDatabase[0].password, function (err, result) {
                         if (result === true) {
 
-                            var secret = 'secret';
-                            var token = jwt.encode(usersFromDatabase[0], secret);
+                            var token = jwt.encode(usersFromDatabase[0], jwtConfig.jwtSecret);
 
                             return res.status(200).end(res.json(
                                 {
