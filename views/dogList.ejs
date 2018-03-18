@@ -49,13 +49,13 @@
                         <a href="/dogs/<%= dog._id %>/edit" class="btn btn-info btn-block">Edit</a>
                         <a href="/dogs/<%= dog._id %>/delete" class="btn btn-info btn-block">Delete</a>
                         <% } else {%>
-                        <button data-toggle="collapse" data-target="#contactDetails" class="btn btn-info btn-block">Contact</button>
+                        <button data-toggle="collapse" data-target="#<%=dog._id%>" class="btn btn-info btn-block">Contact</button>
                         <% } %>
                     </td>
                 </tr>
             </table>
             <table class="table table-bordered">
-                <tr id="contactDetails" class="collapse">
+                <tr id="<%=dog._id%>" class="collapse">
                     <td style="width: 100%">
                         <label>Contact details to get: <%= dog.name %></label><br>
                         <label>Email: <%= dog.userEmail %></label><br>
