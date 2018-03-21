@@ -13,7 +13,7 @@ module.exports = function () {
         };
 
         Dog.update({_id: req.params.dogid}, {$set: dogFromRequest}, function () {
-            return res.send(200);
+            return res.sendStatus(200);
         });
 
 

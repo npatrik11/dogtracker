@@ -35,12 +35,8 @@ app.use(session({
 /**
  * Parse parameters in POST
  */
-// for parsing application/json
-app.use(bodyParser.json());
-// for parsing application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 /**
  * Let's creat the .tpl and .error on the res object
