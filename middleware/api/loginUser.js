@@ -33,6 +33,8 @@ module.exports = function () {
 
                             return res.status(200).end(res.json(
                                 {
+                                    email: usersFromDatabase[0].email,
+                                    phoneNumber: usersFromDatabase[0].phoneNumber,
                                     token: token
                                 }
                             ));
