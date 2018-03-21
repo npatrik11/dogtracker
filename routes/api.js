@@ -2,6 +2,7 @@ var loginUserMW = require('../middleware/api/loginUser');
 var getDogListMW = require('../middleware/api/getDogList');
 var checkTokenMW = require('../middleware/api/checkToken');
 var deleteDogMW = require('../middleware/api/deleteDog');
+var editDogMW = require('../middleware/api/editDog');
 
 module.exports = function (app) {
 
@@ -18,6 +19,11 @@ module.exports = function (app) {
     app.delete('/api/dogs/:dogid/delete',
         checkTokenMW(),
         deleteDogMW()
+    );
+
+    app.put('/api/dogs/:dogid/edit',
+        checkTokenMW(),
+        editDogMW()
     );
 
 
