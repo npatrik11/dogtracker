@@ -4,7 +4,7 @@ var uploadDogMW = require('../middleware/dogs/uploadDog');
 var getDogMW = require('../middleware/dogs/getDog');
 var checkUserLoggedInMW = require('../middleware/common/checkUserLoggedIn');
 var editDogMW = require('../middleware/dogs/editDog');
-var deleteDogMW = require('../middleware/dogs/deleteDogMW');
+var deleteDogMW = require('../middleware/dogs/deleteDog');
 var multer = require('multer');
 var upload = multer({limits: {fileSize: 2000000 },dest:'./uploads/'});
 
