@@ -1,6 +1,5 @@
-var User = require("../../schema/user");
 
-module.exports = function () {
+module.exports = function (objectRepository) {
 
     return function (req, res, next) {
 
@@ -26,7 +25,7 @@ module.exports = function () {
             return next();
         }
 
-        User.find({
+        objectRepository.userModel.find({
             email: userFromRequest.email
         }, function (err, usersFromDatabase) {
 
@@ -37,7 +36,7 @@ module.exports = function () {
 
                 if (usersFromDatabase.length === 0) {
 
-                    User.create(userFromRequest, function (err, user) {
+                    objectRepository.userModel.create(userFromRequest, function (err, user) {
                         if (err) {
                             res.tpl.error.push(err);
                             return next();

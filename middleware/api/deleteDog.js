@@ -1,4 +1,4 @@
-var Dog = require('../../schema/dog')
+var Dog = require('../../models/dog')
 
 
 module.exports = function () {

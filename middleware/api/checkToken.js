@@ -1,4 +1,4 @@
-var User = require('../../schema/user');
+var User = require('../../models/user');
 var jwt = require('jwt-simple');
 var jwtConfig = require('../../config/jwtConfig');
 

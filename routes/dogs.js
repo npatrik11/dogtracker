@@ -8,14 +8,20 @@ var deleteDogMW = require('../middleware/dogs/deleteDog');
 var multer = require('multer');
 var upload = multer({limits: {fileSize: 2000000 },dest:'./uploads/'});
 
+var dogModel = require('../models/dog');
+
 module.exports = function (app) {
+
+    var objectRepository = {
+      dogModel: dogModel
+    };
 
     /**
      * List all the dogs
      */
     app.get('/dogs',
         checkUserLoggedInMW(),
-        getDogListMW(),
+        getDogListMW(objectRepository),
         renderMW('dogList')
     );
 
@@ -25,7 +31,7 @@ module.exports = function (app) {
      */
     app.use('/dogs/:dogid/delete',
         checkUserLoggedInMW(),
-        deleteDogMW()
+        deleteDogMW(objectRepository)
     );
 
     /**
@@ -33,14 +39,14 @@ module.exports = function (app) {
      */
     app.get('/dogs/:dogid/edit',
         checkUserLoggedInMW(),
-        getDogMW(),
+        getDogMW(objectRepository),
         renderMW('editDog')
     );
 
     app.post('/dogs/:dogid/edit',
         checkUserLoggedInMW(),
         upload.single('editInputImageFile'),
-        editDogMW(),
+        editDogMW(objectRepository),
         renderMW('editDog')
     );
 
@@ -55,7 +61,7 @@ module.exports = function (app) {
     app.post('/dogs/new',
         checkUserLoggedInMW(),
         upload.single('uploadInputImageFile'),
-        uploadDogMW(),
+        uploadDogMW(objectRepository),
         renderMW('uploadDog')
     );
 
@@ -65,7 +71,7 @@ module.exports = function (app) {
      */
     app.get('/dogs/:dogid/image',
         checkUserLoggedInMW(),
-        getDogMW(),
+        getDogMW(objectRepository),
         renderMW('dogImage')
     );
 

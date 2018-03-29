@@ -1,7 +1,6 @@
-var User = require('../../schema/user');
 var bcrypt = require('bcrypt');
 
-module.exports = function () {
+module.exports = function (objectRepository) {
 
     return function (req, res, next) {
 
@@ -10,7 +9,7 @@ module.exports = function () {
             password: req.body.loginInputPassword
         };
 
-        User.find({
+        objectRepository.userModel.find({
             email: userFromRequest.email,
         }, function (err, usersFromDatabase) {
 

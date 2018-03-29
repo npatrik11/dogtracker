@@ -1,4 +1,4 @@
-var Dog = require('../../schema/dog')
+var Dog = require('../../models/dog')
 
 /**
  * Get the dog list and put the dogs in res.tpl.dogs

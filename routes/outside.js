@@ -5,7 +5,14 @@ var checkUserLoggedInMW = require('../middleware/common/checkUserLoggedIn');
 var logoutUserMW = require('../middleware/outside/logoutUser');
 var mainRedirectMW = require('../middleware/outside/mainRedirect');
 
+var userModel = require('../models/user');
+
 module.exports = function (app) {
+
+    var objectRepository = {
+        userModel: userModel
+    };
+
 
     /**
      * Main page
@@ -22,7 +29,7 @@ module.exports = function (app) {
     );
 
     app.post('/login',
-        loginUserMW(),
+        loginUserMW(objectRepository),
         renderMW('login')
     );
 
@@ -34,7 +41,7 @@ module.exports = function (app) {
     );
 
     app.post('/register',
-        registerUserMW(),
+        registerUserMW(objectRepository),
         renderMW('register')
     );
 

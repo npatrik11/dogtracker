@@ -1,11 +1,8 @@
-var Dog = require('../../schema/dog')
-
-
-module.exports = function () {
+module.exports = function (objectRepository) {
 
     return function (req, res, next) {
 
-        Dog.remove({_id: req.params.dogid}, function (err) {
+        objectRepository.dogModel.remove({_id: req.params.dogid}, function (err) {
             if (err) {
                 console.log(err)
             } else {

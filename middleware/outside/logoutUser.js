@@ -1,5 +1,3 @@
-var User = require('../../schema/user')
-
 module.exports = function () {
 
     return function (req, res, next) {

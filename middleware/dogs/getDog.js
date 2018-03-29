@@ -1,14 +1,12 @@
-var Dog = require('../../schema/dog')
-
 /**
  * Get the dog image and put the dogs in res.tpl.dogImage
  */
 
-module.exports = function () {
+module.exports = function (objectRepository) {
 
     return function (req, res, next) {
 
-        Dog.find({
+        objectRepository.dogModel.find({
             _id:req.params.dogid
         }, function (err, dogs) {
 

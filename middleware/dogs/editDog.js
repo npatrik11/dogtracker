@@ -1,8 +1,6 @@
-var Dog = require("../../schema/dog");
 var fs = require('fs-extra');
 
-
-module.exports = function () {
+module.exports = function (objectRepository) {
 
     return function (req, res, next) {
 
@@ -40,7 +38,7 @@ module.exports = function () {
             return next();
         }
 
-        Dog.update({_id: req.params.dogid}, {$set: dogFromRequest}, function () {
+        objectRepository.dogModel.update({_id: req.params.dogid}, {$set: dogFromRequest}, function () {
             return res.redirect('/dogs');
         });
 

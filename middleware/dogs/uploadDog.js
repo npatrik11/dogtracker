@@ -1,8 +1,8 @@
-var Dog = require("../../schema/dog");
+var Dog = require("../../models/dog");
 var fs = require('fs-extra');
 
 
-module.exports = function () {
+module.exports = function (objectRepository) {
 
     return function (req, res, next) {
 
@@ -42,7 +42,7 @@ module.exports = function () {
             return next();
         }
 
-        Dog.create(dogFromRequest, function (err, dog) {
+        objectRepository.dogModel.create(dogFromRequest, function (err, dog) {
             if (err) {
                 res.tpl.error.push(err);
                 return next();
