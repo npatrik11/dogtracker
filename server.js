@@ -9,7 +9,7 @@ var bearerToken = require('express-bearer-token');
 
 
 /**
- * For own api
+ * For my own api
  */
 app.use(bearerToken());
 
@@ -21,10 +21,10 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 /**
- * Session above all
+ * Create session
  */
 app.use(session({
-    secret: 'keyboard cat',
+    secret: 'session secret',
     cookie: {
         maxAge: 600000
     },
@@ -39,7 +39,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 /**
- * Let's creat the .tpl and .error on the res object
+ * Create the .tpl and .tpl.error on the res object
  */
 app.use(function (req, res, next) {
     res.tpl = {};
@@ -49,7 +49,7 @@ app.use(function (req, res, next) {
 });
 
 /**
- * Include all the routes
+ * Include the routes
  */
 require('./routes/dogs')(app);
 require('./routes/outside')(app);
