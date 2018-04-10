@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-    <title>Upload</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+<% include header %>
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
@@ -29,15 +20,18 @@
                 </div>
                 <div class="form-group">
                     <label for="uploadInputName">Name</label>
-                    <input type="text" class="form-control" name="uploadInputName" id="uploadInputName" placeholder="Name">
+                    <input type="text" class="form-control" name="uploadInputName" id="uploadInputName"
+                           placeholder="Name">
                 </div>
                 <div class="form-group">
                     <label for="uploadInputType">Type</label>
-                    <input type="text" class="form-control" name="uploadInputType" id="uploadInputType" placeholder="Type">
+                    <input type="text" class="form-control" name="uploadInputType" id="uploadInputType"
+                           placeholder="Type">
                 </div>
                 <div class="form-group">
                     <label for="uploadInputAge">Age</label>
-                    <input type="number" min="0" max="100" class="form-control" name="uploadInputAge" id="uploadInputAge" placeholder="Age (years)">
+                    <input type="number" min="0" max="100" class="form-control" name="uploadInputAge"
+                           id="uploadInputAge" placeholder="Age (years)">
                 </div>
                 <div class="form-group">
                     <label for="uploadInputSex">Sex</label>
@@ -53,5 +47,4 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+<% include footer %>
